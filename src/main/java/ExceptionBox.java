@@ -21,6 +21,9 @@ public class ExceptionBox {
         } catch (ArithmeticException a) {
             System.out.println(a.getMessage());
         }
+        finally {
+            System.out.println("Finally something that always gets done!");
+        }
 
 
     }
@@ -48,6 +51,11 @@ public class ExceptionBox {
     public void throwException() throws FileNotFoundException {
 
         FileInputStream fileInputStream = new FileInputStream("file.txt");
+
+    }
+
+
+    public void finallydoSomething(){
 
     }
 
