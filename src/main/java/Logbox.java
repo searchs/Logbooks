@@ -1,9 +1,18 @@
 import java.util.Scanner;
+import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /**
  * Logging Mechanism
+ * <p/>
+ * Log Handlers
+ * ConsoleHandler
+ * StreamHandler
+ * FileHandler
+ * SocketHandler
+ * MemoryHandler
  */
 public class Logbox {
 
@@ -11,8 +20,14 @@ public class Logbox {
     private final static Logger LOGGER = Logger.getLogger(Logbox.class.getName());
 
     public static void main(String[] args) {
+        FileHandler logFile = null;
 
         try {
+
+            logFile = new FileHandler("test_logs.txt", false);
+//            logFile.setFormatter(new SimpleFormatter());
+            logFile.setFormatter(new CustomFormatter());
+            LOGGER.addHandler(logFile);
             int a, b;
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a: ");
