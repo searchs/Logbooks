@@ -1,5 +1,6 @@
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * Handling Exceptions
@@ -20,8 +21,7 @@ public class ExceptionBox {
             System.out.println(c);
         } catch (ArithmeticException a) {
             System.out.println(a.getMessage());
-        }
-        finally {
+        } finally {
             System.out.println("Finally something that always gets done!");
         }
 
@@ -55,7 +55,16 @@ public class ExceptionBox {
     }
 
 
-    public void finallydoSomething(){
+    public void java7TryCatch() throws FileNotFoundException {
+
+
+        try (FileInputStream fis = new FileInputStream("file.txt")) {
+            fis.read();
+            fis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
