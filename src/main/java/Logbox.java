@@ -6,7 +6,8 @@ import java.util.logging.SimpleFormatter;
 
 /**
  * Logging Mechanism
- * <p/>
+ *
+ *
  * Log Handlers
  * ConsoleHandler
  * StreamHandler
