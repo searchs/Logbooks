@@ -1,1 +1,2 @@
-INFO | Data is actually safe | Nov-19-2015 13:15:53
+<html><head><title>Log File</title></head><body><table border='1'>INFO | Data is actually safe | Nov-19-2015 13:34:00
+</table></body></html>

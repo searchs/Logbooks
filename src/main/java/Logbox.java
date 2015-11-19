@@ -7,6 +7,8 @@ import java.util.logging.SimpleFormatter;
 /**
  * Logging Mechanism
  *
+ *You can define/refine the logging level at the system level by updating
+ * the logging.properties file in $AJVA_HOME/jre/lib
  *
  * Log Handlers
  * ConsoleHandler
@@ -25,8 +27,9 @@ public class Logbox {
 
         try {
 
-            logFile = new FileHandler("test_logs.txt", false);
-//            logFile.setFormatter(new SimpleFormatter());
+            logFile = new FileHandler("test_logs.html");
+//            logFile = new FileHandler("test_logs.txt", true); //false will delete existing file
+//            logFile.setFormatter(new SimpleFormatter()); //default
             logFile.setFormatter(new CustomFormatter());
             LOGGER.addHandler(logFile);
             int a, b;
@@ -42,6 +45,7 @@ public class Logbox {
             }
 
             int c = b / a;
+            System.out.println(c);
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, e.getMessage());
         }
