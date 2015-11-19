@@ -65,6 +65,13 @@ public class ExceptionBox {
             e.printStackTrace();
         }
 
+    }
+
+
+    public void myOwnException(){
+//        Checked Exception extends Exception
+
+//    Runtime exception extends RuntimeException
 
     }
 
