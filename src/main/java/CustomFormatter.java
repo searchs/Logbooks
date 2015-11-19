@@ -30,14 +30,16 @@ public class CustomFormatter extends Formatter {
     @Override
     public String getHead(Handler h) {
         StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append("<html style='margin: 0 auto;'>");
+        stringBuffer.append("<html>");
         stringBuffer.append("<head>");
         stringBuffer.append("<title>");
         stringBuffer.append("Log File");
         stringBuffer.append("</title>");
+        stringBuffer.append("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\" integrity=\"sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==\" crossorigin=\"anonymous\">");
         stringBuffer.append("</head>");
-        stringBuffer.append("<body style='margin: 0 auto; padding: 10px; font-family: Arial;'>");
-        stringBuffer.append("<table border='1'>");
+        stringBuffer.append("<body class=\"container\">");
+        stringBuffer.append("<hr />");
+        stringBuffer.append("<table class=\"table table-striped\">");
         return stringBuffer.toString();
 
 
@@ -48,6 +50,8 @@ public class CustomFormatter extends Formatter {
     public String getTail(Handler h) {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("</table>");
+        stringBuffer.append("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\" integrity=\"sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==\" crossorigin=\"anonymous\">");
+        stringBuffer.append("</script>");
         stringBuffer.append("</body>");
         stringBuffer.append("</html>");
         return stringBuffer.toString();
