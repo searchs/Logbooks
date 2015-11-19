@@ -4,7 +4,6 @@ import java.io.IOException;
 
 /**
  * Handling Exceptions
- * <p/>
  * Rules:
  * Checked Exceptions e.g. IO or missing file exceptions must be put in a try-catch
  */
@@ -68,7 +67,7 @@ public class ExceptionBox {
     }
 
 
-    public void myOwnException(){
+    public void myOwnException() {
 //        Checked Exception extends Exception
 
 //    Runtime exception extends RuntimeException
